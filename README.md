@@ -89,12 +89,12 @@ The app consists of several screens that allow users to navigate through various
 
 <div style="display: flex; justify-content: center;">
 
-  <img src="./assets/images/deploy/homeTab.png" alt="Home screen Image" width="200" height="200" style="margin-right: 10px;" />
-  <img src="./assets/images/deploy/wishlistTab.png" alt="Home screen Image" width="200" height="200" style="margin-right: 10px;" />
-  <img src="./assets/images/deploy/basketTab.png" alt="Home screen Image" width="200" height="200" style="margin-right: 10px;" />
-  <img src="./assets/images/deploy/searchTab.png" alt="Home screen Image" width="200" height="200" style="margin-right: 10px;" />
+  <img src="./assets/images/deploy/homeTab.png" alt="Home screen Image" width="250"  style="margin-right: 10px;" />
+  <img src="./assets/images/deploy/wishlistTab.png" alt="Home screen Image" width="250"  style="margin-right: 10px;" />
+  <img src="./assets/images/deploy/basketTab.png" alt="Home screen Image" width="250"  style="margin-right: 10px;" />
+  <img src="./assets/images/deploy/searchTab.png" alt="Home screen Image" width="250"  style="margin-right: 10px;" />
   
-  <img src="./assets/images/deploy/settingTab.png" alt="Menu screen Image" width="200" height="300" />
+  <img src="./assets/images/deploy/settingTab.png" alt="Menu screen Image" width="250"  />
 
 </div>
 
