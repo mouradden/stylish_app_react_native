@@ -1,5 +1,5 @@
 import { View, Text, Image, TouchableOpacity, FlatList, Dimensions, NativeSyntheticEvent, NativeScrollEvent  } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { OfferCard } from '../types'
 const { width } = Dimensions.get('window');
 const cardsData: OfferCard[] = [
@@ -32,21 +32,32 @@ const cardsData: OfferCard[] = [
     },
 ];
 const OfferCards = () => {
-    const [activeIndex, setActiveIndex] = useState<number>(0);
-    const [cards, setCards] = useState<OfferCard[]>([]);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
+  const [cards, setCards] = useState<OfferCard[]>([]);
+  const flatListRef = useRef<FlatList>(null);
+  
+  useEffect(() => {
+    setCards(cardsData); // Set the cards based on the data, assuming `cardsData` is provided (for me maually, but in a real world case form the database using an API for example)
+  }, []);
 
-    useEffect(()=>{
-            setCards(cardsData);    // here i set cards based on the the data i provide, but in a real situation,
-                                    // the data should be got from a database using an api for example
-    }, []);
-
-    const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => { // here i use the position of the scroll to detect the index of which card i reached now
-    const index = Math.round(event.nativeEvent.contentOffset.x / width);
+  const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+    const index = Math.round(event.nativeEvent.contentOffset.x / width); // Calculate the current index based on scroll position
     setActiveIndex(index);
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextIndex = activeIndex + 1 >= cards.length ? 0 : activeIndex + 1; // Determine the next index, looping back to 0 if at the end
+      flatListRef.current?.scrollToIndex({ index: nextIndex, animated: true });
+      setActiveIndex(nextIndex);
+    }, 5000); // Scroll every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [activeIndex, cards.length]);
   return (
 <View >
     <FlatList 
+        ref={flatListRef}
         data={cards}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
