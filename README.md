@@ -67,6 +67,7 @@ The app consists of several screens that allow users to navigate through various
 3. **SignUpScreen**: The screen where users can register for a new account.
 4. **HomeScreen**: The main screen of the app where the search area, the categories, the offers and the deals.
 4. **Additional Screens**: Other screens, such as Wishlist, Basket, Search, and Setting, for testing purpose of the navBar.
+
 ### HomeScreen
 **Key Features:**
 - Every part on a seperate component.

@@ -29,6 +29,7 @@ const SplashScreen = () => {
     const [currentPage, setCurrentPage] = useState<number>(0);
     const navigation = useNavigation();
 
+    // hold the splash image for 2 seconds 
     useEffect(()=>{
         setTimeout(()=>{
             setIsLoading(false);
