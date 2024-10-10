@@ -74,13 +74,27 @@ The app consists of several screens that allow users to navigate through various
 - A deal of the day card that includes a count down timer.
 
 **Demo :**
-   -for easily testing to navigate the login and signup screens, i create a menu that shows up when clicking on the menu icon in the very top left of the home screen.
-   
+
+   - For easily testing to navigate the login and signup screens, i create a menu that shows up when clicking on the menu icon in the very top left of the home screen.
+
 <div style="display: flex; justify-content: center;">
 
   <img src="./assets/images/deploy/home.png" alt="Home screen Image" width="300" style="margin-right: 10px;" />
   
   <img src="./assets/images/deploy/menu.png" alt="Menu screen Image" width="300" />
+
+</div>
+
+   - The bottom navbar navigation works perfectly, for testing it a create additional screens
+
+<div style="display: flex; justify-content: center;">
+
+  <img src="./assets/images/deploy/homeTab.png" alt="Home screen Image" width="150" height="200" style="margin-right: 10px;" />
+  <img src="./assets/images/deploy/wishlistTab.png" alt="Home screen Image" width="150" height="200" style="margin-right: 10px;" />
+  <img src="./assets/images/deploy/basketTab.png" alt="Home screen Image" width="150" height="200" style="margin-right: 10px;" />
+  <img src="./assets/images/deploy/searchtab.png" alt="Home screen Image" width="150" height="200" style="margin-right: 10px;" />
+  
+  <img src="./assets/images/deploy/settingTab.png" alt="Menu screen Image" width="150" height="200" />
 
 </div>
 
