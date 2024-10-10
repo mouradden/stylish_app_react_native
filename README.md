@@ -73,8 +73,9 @@ The app consists of several screens that allow users to navigate through various
 - The Offer Cards are scrollable, and scroll automatically every 5 seconds.
 - A deal of the day card that includes a count down timer.
 
-** Demo **
-   -for easily testing to navigate the login and signup screens, i create a menu that shows up when clicking on the menu icon in the very top left of the screen
+**Demo :**
+   -for easily testing to navigate the login and signup screens, i create a menu that shows up when clicking on the menu icon in the very top left of the home screen.
+   
 <div style="display: flex; justify-content: center;">
 
   <img src="./assets/images/deploy/home.png" alt="Home screen Image" width="300" style="margin-right: 10px;" />
