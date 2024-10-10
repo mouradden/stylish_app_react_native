@@ -1,9 +1,9 @@
 ## Table of Contents
-- [Installation](#Get started)
+- [Installation](#Installation)
 - [Usage](#usage)
 
 
-## Get started
+## Installation
 
 1. Clone the repo:
    ```bash
