@@ -53,7 +53,7 @@
 
 ## Documentation
 
-- [Thechnologies Used](#thechnologies-used)
+- [Technologies Used](#technologies-used)
 - [The Screens](#the-screens)
 - [HomeScreen](#homescreen)
 - [SplashScreen](#splashscreen)
@@ -61,7 +61,7 @@
 - [SignUpScreen](#signup-screen)
 
 
-### Thechnologies Used
+### Technologies Used
 
 ![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 ![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
