@@ -54,6 +54,7 @@
 ## Documentation
 
 - [The Screens](#the-screens)
+- [HomeScreen](#homescreen)
 - [SplashScreen](#splashscreen)
 - [LoginScreen](#login-screen)
 - [SignUpScreen](#signup-screen)
@@ -64,7 +65,23 @@ The app consists of several screens that allow users to navigate through various
 1. **SplashScreen**: The initial screen displayed when the app starts.
 2. **LoginScreen**: The screen where users can log into their account.
 3. **SignUpScreen**: The screen where users can register for a new account.
-4. **Additional Screens**: Other key screens, such as Home, Profile, or Settings, that will be described later.
+4. **HomeScreen**: The main screen of the app where the search area, the categories, the offers and the deals.
+4. **Additional Screens**: Other screens, such as Wishlist, Basket, Search, and Setting, for testing purpose of the navBar.
+### HomeScreen
+**Key Features:**
+- Every part on a seperate component.
+- The Offer Cards are scrollable, and scroll automatically every 5 seconds.
+- A deal of the day card that includes a count down timer.
+
+** Demo **
+   -for easily testing to navigate the login and signup screens, i create a menu that shows up when clicking on the menu icon in the very top left of the screen
+<div style="display: flex; justify-content: center;">
+
+  <img src="./assets/images/deploy/home.png" alt="Home screen Image" width="300" style="margin-right: 10px;" />
+  
+  <img src="./assets/images/deploy/menu.png" alt="Menu screen Image" width="300" />
+
+</div>
 
 ### SplashScreen
 The `SplashScreen` is the first screen users encounter when they open the app. It serves as a loading screen while the app initializes, potentially displaying a logo or animation before navigating to the `LoginScreen`.
