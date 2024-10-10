@@ -2,11 +2,13 @@ import { View, Text, SafeAreaView, TextInput, TouchableOpacity, Image } from 're
 import React, { useState } from 'react'
 import { LockClosedIcon, UserIcon } from 'react-native-heroicons/solid/'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+
 const LoginScreen = () => {
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const [password, setPassword] = useState<string>('');
     const [Idenifiant, setIdenifiant] = useState<string>('');
-    
+    const navigation = useNavigation();
     const toggleShowPassword = () => {
         setShowPassword(!showPassword);
     };
@@ -14,9 +16,10 @@ const LoginScreen = () => {
     <SafeAreaView>
         <View  className='flex flex-col space-y-16 h-screen p-8'>
             <View>
-                <Text className='text-5xl font-semibold font-mono text-wrap w-[210px]'>Welcome Back!</Text>
+                <Text className='text-5xl font-semibold text-wrap w-[210px]'>Welcome Back!</Text>
             </View>
             <View className='flex flex-col gap-6'>
+                {/* username input */}
                 <View className='flex flex-row items-center space-x-2 p-4 border border-[#A8A8A9] rounded-lg bg-gray-200 '>
                     <UserIcon size={25} color='#626262'/>
                     <TextInput 
@@ -27,6 +30,7 @@ const LoginScreen = () => {
                     />
                 </View>
                 <View className=''>
+                    {/* password input */}
                     <View className='flex flex-row items-center space-x-2 p-4 border border-[#A8A8A9] rounded-lg bg-gray-200 mb-2'>
                         <LockClosedIcon size={25} color='#626262'/>
                         <TextInput 
@@ -49,6 +53,7 @@ const LoginScreen = () => {
                     </TouchableOpacity>
                 </View>
                 <View>
+                    {/* login button */}
                     <TouchableOpacity
                     className='bg-[#F83758] items-center p-4 rounded-lg mt-8'
                     >
@@ -56,6 +61,7 @@ const LoginScreen = () => {
                     </TouchableOpacity>
                 </View>
             </View>
+            {/* other ligin methods */}
             <View className='items-center space-y-4 flex flex-col m'>
                 <Text>- OR Continue with -</Text>
                 <View className='flex flex-row gap-4'>
@@ -78,7 +84,11 @@ const LoginScreen = () => {
                     className='flex flex-row gap-2'    
                 >
                     <Text className='text-[#575757]'>Create An Account</Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => {
+                            navigation.navigate('SignUp');
+                        }}
+                    >
                         <Text className='text-[#F83758] font-semibold underline underline-offset-2'>Sign Up</Text>
                     </TouchableOpacity>
                 </View>

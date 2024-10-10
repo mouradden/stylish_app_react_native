@@ -1,8 +1,6 @@
 import { View, Text, SafeAreaView, TouchableOpacity, Image, ScrollView } from 'react-native';
-import React from 'react';
 import OfferCards from '../components/OfferCards';
 import DealCard from '../components/DealCard';
-import NavBar from '../components/NavBar';
 import Categories from '../components/Categories';
 import Header from '../components/Header';
 import SearchArea from '../components/SearchArea';
@@ -25,14 +23,14 @@ const HomeScreen = () => {
                   <Text className='text-lg'>Sort</Text>
                   <Image
                     source={require('../assets/images/sort.png')}
-                    className='w-[16px] h-[16px]' // Same size as others
+                    className='w-[16px] h-[16px]'
                   />
                 </TouchableOpacity>
                 <TouchableOpacity className='bg-white p-2 rounded-lg flex flex-row items-center gap-1'>
                   <Text className='text-lg'>Filter</Text>
                   <Image
                     source={require('../assets/images/filter.png')}
-                    className='w-[16px] h-[16px]' // Same size as others
+                    className='w-[16px] h-[16px]'
                   />
                 </TouchableOpacity>
               </View>
@@ -48,11 +46,6 @@ const HomeScreen = () => {
 
           </View>
         </ScrollView>
-
-        {/* Nav Bar */}
-        {/* <View className='absolute bottom-0 left-0 right-0'>
-          <NavBar />
-        </View> */}
       </View>
     </SafeAreaView>
   );
