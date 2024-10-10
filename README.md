@@ -53,12 +53,19 @@
 
 ## Documentation
 
+- [Thechnologies Used](#thechnologies-used)
 - [The Screens](#the-screens)
 - [HomeScreen](#homescreen)
 - [SplashScreen](#splashscreen)
 - [LoginScreen](#login-screen)
 - [SignUpScreen](#signup-screen)
 
+
+### Thechnologies Used
+
+![React Native](https://img.shields.io/badge/react_native-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 ### The Screens
 The app consists of several screens that allow users to navigate through various features. Below is a detailed description of each screen:
 
