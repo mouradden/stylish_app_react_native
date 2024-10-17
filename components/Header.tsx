@@ -1,9 +1,10 @@
 import { View, TouchableOpacity, Image, Modal, Text, SafeAreaView } from 'react-native'
 import {useState} from 'react'
 import { useNavigation } from '@react-navigation/native';
-
+import { useRouter } from "expo-router";
 
 const Header = () => {
+  const router = useRouter();
   const [menuVisible, setMenuVisible] = useState(false);
   const navigation = useNavigation();
 
@@ -46,12 +47,12 @@ const Header = () => {
               <Text className='text-3xl font-bold font-bold mb-4'>Menu</Text>
               <TouchableOpacity 
                 className=' p-4 '
-                onPress={() => { navigation.navigate('Login'); toggleMenu(); }}>
+                onPress={() => { router.push("/login"); toggleMenu(); }}>
                 <Text className='text-xl font-bold text-blue-600 mb-4'>Login</Text>
               </TouchableOpacity>
               <TouchableOpacity 
                 className=' p-4 '
-                onPress={() => { navigation.navigate('SignUp'); toggleMenu(); }}>
+                onPress={() => { router.push("/signup"); toggleMenu(); }}>
                 <Text className='text-xl font-bold text-blue-600'>Sign Up</Text>
               </TouchableOpacity>
               <TouchableOpacity 

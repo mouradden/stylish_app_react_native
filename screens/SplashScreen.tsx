@@ -2,6 +2,7 @@ import { View, Text, SafeAreaView, TouchableOpacity, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 import { splashType } from '../types';
+import { useRouter } from "expo-router";
 
 const splahes: splashType[] = [
     {
@@ -28,6 +29,7 @@ const SplashScreen = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [currentPage, setCurrentPage] = useState<number>(0);
     const navigation = useNavigation();
+    const router = useRouter();
 
     // hold the splash image for 2 seconds 
     useEffect(()=>{
@@ -55,7 +57,7 @@ const SplashScreen = () => {
                     </View>
                     <TouchableOpacity className=''
                         onPress={()=>{
-                            navigation.navigate('Home');
+                            router.push("/home");
                         }}
                     >
                         <Text className='text-2xl font-semibold'>Skip</Text>
@@ -133,7 +135,7 @@ const SplashScreen = () => {
                         :
                         <TouchableOpacity
                             onPress={()=>{
-                                navigation.navigate('Home');
+                                router.push("/home");
                             }}
                         >
                             <Text className='text-[#f83758] text-2xl font-semibold'>Get started</Text>

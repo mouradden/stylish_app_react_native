@@ -10,7 +10,7 @@ const SettingScreen = () => {
         <View className='items-center'>
             <TouchableOpacity 
                 onPress={() => {
-                    navigation.navigate('HomeTab');
+                    navigation.navigate('Home');
                 }}
                 className=" border rounded-full w-32 h-16 items-center pt-1 m-3 bg-yellow-300 shadow-xl transform rotate-12 hover:scale-110">
                 <Text>back home</Text>

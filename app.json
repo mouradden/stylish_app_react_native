@@ -14,7 +14,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.culeden.stylish_app_react_native"
     },
     "web": {
       "bundler": "metro",
@@ -26,6 +27,11 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "96091e97-aac9-4fe1-b089-340df138632b"
+      }
     }
   }
 }

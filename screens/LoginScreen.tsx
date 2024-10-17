@@ -3,8 +3,10 @@ import React, { useState } from 'react'
 import { LockClosedIcon, UserIcon } from 'react-native-heroicons/solid/'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { useRouter } from "expo-router";
 
 const LoginScreen = () => {
+    const router = useRouter();
     const [showPassword, setShowPassword] = useState<boolean>(false);
     const [password, setPassword] = useState<string>('');
     const [Idenifiant, setIdenifiant] = useState<string>('');
@@ -86,7 +88,7 @@ const LoginScreen = () => {
                     <Text className='text-[#575757]'>Create An Account</Text>
                     <TouchableOpacity
                         onPress={() => {
-                            navigation.navigate('SignUp');
+                            router.push("/signup");
                         }}
                     >
                         <Text className='text-[#F83758] font-semibold underline underline-offset-2'>Sign Up</Text>

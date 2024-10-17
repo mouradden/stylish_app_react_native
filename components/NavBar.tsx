@@ -32,10 +32,10 @@ const NavBar = () => {
           <View className='flex-row space-x-8'>
               {/* the Home button */}
               <TouchableOpacity 
-                  onPress={() => navigation.navigate('HomeTab')}
+                  onPress={() => navigation.navigate('Home')}
                   className='items-center space-y-1'>
-                  <HomeIcon size={32} color={(currentRouteName === 'HomeTab'|| currentRouteName === 'Home') ? '#eb3030' : 'black'} />
-                  <Text className={(currentRouteName === 'HomeTab'|| currentRouteName === 'Home') ? 'text-[#eb3030]' : 'text-black'}>Home</Text>
+                  <HomeIcon size={32} color={(currentRouteName === 'Home') ? '#eb3030' : 'black'} />
+                  <Text className={(currentRouteName === 'Home') ? 'text-[#eb3030]' : 'text-black'}>Home</Text>
               </TouchableOpacity>
 
               {/* the Wishlist button */}

@@ -3,9 +3,11 @@ import React, { useState } from 'react'
 import { LockClosedIcon, UserIcon } from 'react-native-heroicons/solid/'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { useRouter } from "expo-router";
 
 
 const SignUpScreen = () => {
+    const router = useRouter();
     const [password, setPassword] = useState<string>('');
     const [confirmedPassword, setConfirmedPassword] = useState<string>('');
     const [Idenifiant, setIdenifiant] = useState<string>('');
@@ -21,13 +23,13 @@ const SignUpScreen = () => {
     };
   return (
     <SafeAreaView>
-        <View  className='flex flex-col space-y-6 h-screen p-8'>
+        <View  className='flex flex-col space-y-4 h-screen p-10'>
             <View>
                 <Text className='text-5xl font-semibold text-wrap w-[210px]'>Create an account</Text>
             </View>
             {/* username input */}
             <View className='flex flex-col gap-6'>
-                <View className='flex flex-row items-center space-x-2 p-4 border border-[#A8A8A9] rounded-lg bg-gray-200 '>
+                <View className='flex flex-row items-center space-x-2 p-3 border border-[#A8A8A9] rounded-lg bg-gray-200 '>
                     <UserIcon size={25} color='#626262'/>
                     <TextInput 
                         onChangeText={setIdenifiant}
@@ -38,7 +40,7 @@ const SignUpScreen = () => {
                 </View>
                 <View className=''>
                     {/* password input */}
-                    <View className='flex flex-row items-center space-x-2 p-4 border border-[#A8A8A9] rounded-lg bg-gray-200 mb-2'>
+                    <View className='flex flex-row items-center space-x-2 p-3 border border-[#A8A8A9] rounded-lg bg-gray-200 mb-2'>
                         <LockClosedIcon size={25} color='#626262'/>
                         <TextInput 
                             secureTextEntry={!showPassword}
@@ -58,7 +60,7 @@ const SignUpScreen = () => {
                 </View>
                 <View className=''>
                     {/* password confirmation input */}
-                    <View className='flex flex-row items-center space-x-2 p-4 border border-[#A8A8A9] rounded-lg bg-gray-200 mb-2'>
+                    <View className='flex flex-row items-center space-x-2 p-3 border border-[#A8A8A9] rounded-lg bg-gray-200 mb-2'>
                         <LockClosedIcon size={25} color='#626262'/>
                         <TextInput 
                             secureTextEntry={!showConfirmedPassword}
@@ -84,14 +86,14 @@ const SignUpScreen = () => {
                 <View>
                     {/* create account button */}
                     <TouchableOpacity
-                    className='bg-[#F83758] items-center p-4 rounded-lg mt-8'
+                    className='bg-[#F83758] items-center p-4 rounded-lg mt-2'
                     >
                         <Text className='text-white text-2xl font-semibold'>Create Account</Text>
                     </TouchableOpacity>
                 </View>
             </View>
             {/* other sign up methods */}
-            <View className='items-center space-y-4 flex flex-col m'>
+            <View className='items-center space-y-2 flex flex-col m'>
                 <Text>- OR Continue with -</Text>
                 <View className='flex flex-row gap-4'>
                     <TouchableOpacity
@@ -115,7 +117,7 @@ const SignUpScreen = () => {
                     <Text className='text-[#575757]'>I Already Have an Account</Text>
                     <TouchableOpacity
                         onPress={() => {
-                            navigation.navigate('Login');
+                            router.push("/login");
                         }}
                     >
                         <Text className='text-[#F83758] font-semibold underline underline-offset-2'>Login</Text>
